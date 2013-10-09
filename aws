@@ -56,6 +56,16 @@ $ebn_version = "2010-12-01";
 	 ["s", Strategy],
      ]],
     ["ec2", "allocate-address allad", AllocateAddress],
+    ["ec2", "assign-private-ip-addresses apip", AssignPrivateIpAddresses, [
+         ["n", NetworkInterfaceId],
+         ["c", SecondaryPrivateIpAddressCount],
+         ["", PrivateIpAddressN],
+         ["r", AllowReassignment ],
+     ]],
+    ["ec2", "unassign-private-ip-addresses upip", UnassignPrivateIpAddresses, [
+         ["n", NetworkInterfaceId],
+         ["", PrivateIpAddressN ],
+     ]],
     ["ec2", "associate-address aad", AssociateAddress, [
 	 ["", PublicIp],
 	 ["i", InstanceId],
